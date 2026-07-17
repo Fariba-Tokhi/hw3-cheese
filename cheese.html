@@ -6,21 +6,18 @@
     <title>A Short Guide to Cheese</title>
     <link rel="stylesheet" href="cheese.css">
     
-    <!-- 
-        Cascade in Action:
-        This internal style block overrides the external CSS rule for h2 headings.
-        Both rules use the same selector (h2), so they have equal specificity.
-        However, this internal style appears later in the cascade order, so it wins.
-        The browser applies styles in this order:
-        1. External stylesheets (cheese.css)
-        2. Internal stylesheets (<style> block) - THIS ONE WINS
-        3. Inline styles
-    -->
     <style>
-        /* Making sure all h2 headings stay dark and clean */
         h2 {
             color: #1a1a1a !important;
         }
+        /* Note: This overrides the external cheese.css h2 rule 
+           because internal styles have higher specificity than external stylesheets.
+           The browser applies styles in this order: 
+           1. External stylesheets (cheese.css)
+           2. Internal stylesheets (<style> block)
+           3. Inline styles
+           Since both rules use the same selector (h2), the one that comes later in the cascade wins.
+        */
     </style>
 </head>
 
@@ -32,7 +29,6 @@
 
     <main>
         <article>
-            <!-- Adding a heading for accessibility - every article needs one! -->
             <h2>About Cheese</h2>
             
             <p>Cheese is one of humanity's oldest prepared foods. People have made it for at least 7,000 years, long before written history. At its core, cheese is simple: milk, salt, cultures, and rennet. Time and technique do the rest.</p>
@@ -40,14 +36,12 @@
             <section>
                 <h2>What Is Cheese, Really?</h2>
                 <p>Cheese begins when milk separates into curds and whey. The curds are pressed, salted, and aged. Every variable matters: the animal, the season, the cave, the patience of the maker. Change one and you get a different cheese. This is why a single recipe has produced thousands of distinct varieties.</p>
-                <!-- The Latin terms are wrapped in a class so we can style them later -->
                 <p>The word "cheese" comes from the Latin <span class="latin">caseus</span>, which also gives us the word "casein," the main milk protein.</p>
             </section>
 
             <section>
                 <h2>Famous Families of Cheese</h2>
                 
-                <!-- Using a definition list for the cheese families since each has a term and description -->
                 <dl>
                     <dt>🧀 Fresh</dt>
                     <dd>Young and mild: mozzarella, ricotta, and chèvre. Eat these within days.</dd>
@@ -65,10 +59,8 @@
 
             <section>
                 <h2>A Word of Caution</h2>
-                <!-- This warning paragraph has an ID so we can style it as a special highlighted box -->
                 <p id="warning">The American product known as <q>processed cheese food</q> is, at best, distantly related to cheese. Read the label.</p>
 
-                <!-- A blockquote with attribution - perfect for this famous cheese quote -->
                 <blockquote>
                     <p>"Cheese is milk's leap toward immortality."</p>
                     <footer>— attributed to Clifton Fadiman</footer>
@@ -79,7 +71,6 @@
                 <h2>Try It Yourself</h2>
 
                 <form>
-                    <!-- The fieldset creates a nice box around the checkbox options -->
                     <fieldset>
                         <legend>Which of these have you tasted?</legend>
 
@@ -99,7 +90,6 @@
                         </label>
                     </fieldset>
 
-                    <!-- This group keeps the favorite cheese section inline on desktop -->
                     <div class="favorite-group">
                         <label for="favorite">Tell us your favorite cheese:</label>
                         <input type="text" id="favorite" name="favorite" placeholder="e.g. Comté">
@@ -111,7 +101,6 @@
     </main>
 
     <footer>
-        <!-- The link inside the footer gets special styling to look like a real link -->
         <p>Copyright 2026 <a href="#">The CSE Cheese Society</a>. Cheese responsibly.</p>
     </footer>
 </body>
