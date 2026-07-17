@@ -1,0 +1,14 @@
+:root {
+    --text-color: #1a1a1a;
+    --heading-color: #1a1a1a;
+    --secondary-color: #666666;
+    --cheese-color: #c8923b;
+    --cheese-light: #f5e6c8;
+    --cheese-dark: #a87a30;
+    --cheese-highlight: #faf0dc;
+    --link-color: #0066cc;
+    --font-main: Georgia, "Times New Roman", serif;
+    --content-width: 680px;
+    --spacing-unit: 1.5rem;
+    --accent-color: #c8923b;
+}

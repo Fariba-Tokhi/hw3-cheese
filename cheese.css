@@ -1,0 +1,313 @@
+/* Deployed page: https://your-netlify-or-github-pages-url.com */
+
+@import url('variables.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--text-color);
+    line-height: 1.7;
+    background-color: #ffffff;
+    max-width: var(--content-width);
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+}
+
+header {
+    margin-bottom: 2.5rem;
+    text-align: left;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 0.25rem;
+}
+
+header p {
+    color: var(--cheese-color);
+    font-size: 0.95rem;
+    margin-top: 0.25rem;
+}
+
+main {
+    padding: 0;
+}
+
+article > p {
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+section {
+    margin-bottom: 0.1rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.latin {
+    font-weight: 700;
+    font-style: normal;
+    color: var(--text-color);
+}
+
+dl {
+    margin: 0.5rem 0 1.5rem 0;
+    padding-left: 0;
+}
+
+dt {
+    font-weight: 700;
+    color: var(--cheese-color);
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+dt + dd {
+    margin-bottom: 0.75rem;
+    padding-left: 0;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+#warning {
+    background-color: var(--cheese-light);
+    border: 2px solid var(--cheese-dark);
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem 0 1rem 0;
+    font-weight: normal;
+    color: #000000;
+    line-height: 1.6;
+}
+
+blockquote {
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    background-color: var(--cheese-highlight);
+    border-left: 6px solid var(--cheese-dark);
+    border-radius: 0 4px 4px 0;
+    font-style: normal;
+}
+
+blockquote p {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+    font-style: italic;
+    padding-left: 0;
+}
+
+blockquote footer {
+    text-align: left;
+    font-style: normal;
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-top: 0.1rem;
+    padding-left: 0;
+}
+
+form {
+    background-color: transparent;
+    padding: 0;
+    margin: 1rem 0 0 0;
+}
+
+fieldset {
+    border: 2px solid var(--cheese-dark);
+    border-radius: 0;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    margin: 0 0 1.5rem 0;
+    background-color: transparent;
+}
+
+legend {
+    font-weight: 700;
+    color: var(--heading-color);
+    padding: 0 0.75rem;
+    font-size: 1.1rem;
+    font-family: var(--font-main);
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    cursor: pointer;
+    font-weight: normal;
+    color: var(--text-color);
+}
+
+input[type="text"] {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    display: inline-block;
+    width: auto;
+    min-width: 200px;
+}
+
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+input:focus,
+button:focus,
+a:focus {
+    outline: 2px solid var(--cheese-color);
+    outline-offset: 2px;
+}
+
+[lang="en"] {
+    background-color: transparent;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: var(--cheese-color);
+}
+
+.favorite-group {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.favorite-group label {
+    margin: 0;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.favorite-group input[type="text"] {
+    flex: 0 1 auto;
+    min-width: 150px;
+}
+
+.favorite-group button {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--cheese-color);
+    text-decoration: underline;
+}
+
+blockquote::before {
+    content: "";
+    display: none;
+}
+
+section::after {
+    content: "· · ·";
+    display: block;
+    text-align: center;
+    color: #ccc;
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+}
+
+section:last-of-type::after {
+    content: none;
+}
+
+footer {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+footer a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: var(--cheese-color);
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1.5rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    #warning {
+        padding: 0.75rem 1rem;
+    }
+    
+    blockquote {
+        padding: 0.5rem 0.75rem 0.5rem 1rem;
+    }
+    
+    fieldset {
+        padding: 1rem;
+    }
+    
+    legend {
+        font-size: 1rem;
+    }
+    
+    .favorite-group {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+    
+    .favorite-group label {
+        white-space: normal;
+    }
+    
+    .favorite-group input[type="text"] {
+        width: 100%;
+        min-width: unset;
+    }
+}
