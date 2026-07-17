@@ -1,6 +1,7 @@
 /* Deployed page: https://fariba-tokhi.github.io/hw3-cheese/ */
 
 @import url('variables.css');
+/* Note: @import is used here for the assignment requirement. In production, <link> is preferred because it allows parallel downloading and faster page loading. */
 
 * {
     margin: 0;
@@ -24,7 +25,7 @@ header {
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
     font-weight: 700;
     color: var(--heading-color);
     margin-bottom: 0.25rem;
@@ -110,7 +111,7 @@ dd {
 
 blockquote {
     margin: 1.5rem 0;
-    padding: 0.5rem 1rem 0.5rem 1.5rem;
+    padding: 0.5em 1em 0.5em 1.5em;
     background-color: var(--cheese-highlight);
     border-left: 6px solid var(--cheese-dark);
     border-radius: 0 4px 4px 0;
@@ -285,7 +286,7 @@ footer a:hover {
     }
     
     blockquote {
-        padding: 0.5rem 0.75rem 0.5rem 1rem;
+        padding: 0.5em 0.75em 0.5em 1em;
     }
     
     fieldset {
